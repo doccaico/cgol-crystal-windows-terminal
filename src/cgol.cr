@@ -34,8 +34,7 @@ class App
       GRID_Y.times do |y|
         GRID_X.times do |x|
           index = y * GRID_X + x
-          cell = @main_grid[index]
-          sb << (cell == Cell::Dead ? DEAD_CELL : ALIVE_CELL)
+          sb << (@main_grid[index].dead? ? DEAD_CELL : ALIVE_CELL)
         end
         sb << "\n"
       end
