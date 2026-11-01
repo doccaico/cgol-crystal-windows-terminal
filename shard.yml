@@ -1,0 +1,13 @@
+name: cgol-crystal-windows-terminal
+version: 0.1.0
+
+authors:
+  - doccaico <hash_ext_luna@yahoo.co.jp>
+
+targets:
+  cgol:
+    main: src/cgol.cr
+
+crystal: '>= 1.22.2'
+
+license: MIT
