@@ -48,15 +48,15 @@ class App
 
     (-1..1).each do |dy|
       (-1..1).each do |dx|
-        # 自分自身（dx = 0 かつ dy = 0）は除外
+        # Exclude self (dx = 0 and dy = 0)
         next if dx == 0 && dy == 0
 
         nx = x + dx
         ny = y + dy
 
-        # グリッドの範囲内かチェック
+        # Check if within grid bounds
         if nx >= 0 && nx < GRID_X && ny >= 0 && ny < GRID_Y
-          # 1次元のインデックスに変換して状態をチェック
+          # Convert to 1D index and check state
           index = ny * GRID_X + nx
           if grid[index].alive?
             count += 1
